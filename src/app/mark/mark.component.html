@@ -1,0 +1,18 @@
+<h2>Edit marks for {{ student?.firstName }}</h2>
+<form>
+  <table>
+    <thead>
+      <tr>
+        <th>Subject</th>
+        <th>Mark</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let mark of marks; let i = index">
+        <td>{{ mark.subject }}</td>
+        <td><input type="number" [(ngModel)]="marks[i].mark" name="marks[i].mark" min="0" max="20" required></td>
+      </tr>
+    </tbody>
+  </table>
+  <button type="button" (click)="updateStudent()">Save</button>
+</form>

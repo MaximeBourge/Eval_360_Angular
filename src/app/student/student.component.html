@@ -1,0 +1,15 @@
+<h2>{{ student.firstName }}</h2>
+
+<h3>Notes</h3>
+<form (submit)="updateStudent()">
+  <ul>
+    <li *ngFor="let mark of marks; let i = index">
+      <label>Note {{ i + 1 }}</label>
+      <input type="number" [(ngModel)]="marks[i].mark" name="mark{{ i }}" min="0" max="20" required>
+      <span>/20</span>
+    </li>
+  </ul>
+  <button type="submit">Enregistrer</button>
+</form>
+
+<a [routerLink]="['/marks', student.id]">Voir les notes</a>
