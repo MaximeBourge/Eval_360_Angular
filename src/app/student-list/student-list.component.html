@@ -1,8 +1,6 @@
-<div *ngIf="students">
-  <h2>List of students</h2>
-  <ul>
-    <li *ngFor="let student of students">
-      <a routerLink="/marks/{{ student.id }}">{{ student.firstName }} {{ student.lastName }}</a>
-    </li>
-  </ul>
-</div>
+<h2>Liste des élèves</h2>
+<ul>
+  <li *ngFor="let student of students">
+    <a routerLink="/student/{{student.id}}">{{ student.name }}</a>
+  </li>
+</ul>
