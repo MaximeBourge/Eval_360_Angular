@@ -1,0 +1,88 @@
+.project-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom, #edf2f7 0%, #000000 100%);
+}
+
+.project-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  padding: 32px;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+}
+
+h2 {
+  font-family: 'Montserrat Bold', sans-serif;
+  font-size: 24px;
+  color: #000000;
+  margin-bottom: 32px;
+}
+
+.project-group-info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.project-group-info label {
+  font-family: 'Montserrat Bold', sans-serif;
+  font-size: 16px;
+  color: #000000;
+  margin-bottom: 8px;
+}
+
+.project-group-info p {
+  font-family: 'Montserrat Regular', sans-serif;
+  font-size: 16px;
+  color: #000000;
+}
+
+.project-description {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.project-description label {
+  font-family: 'Montserrat Bold', sans-serif;
+  font-size: 16px;
+  color: #000000;
+  margin-bottom: 8px;
+}
+
+.project-description p {
+  font-family: 'Montserrat Regular', sans-serif;
+  font-size: 16px;
+  color: #000000;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.button-container button[type="submit"] {
+  width: 100%;
+  margin-top: 16px;
+  padding: 12px 24px;
+  background-color: #D9D9D9;
+  border: none;
+  border-radius: 20px;
+  color: #000000;
+  font-size: 16px;
+}
+
+.button-container button[type="submit"]:hover {
+  background-color: #BDBDBD;
+}

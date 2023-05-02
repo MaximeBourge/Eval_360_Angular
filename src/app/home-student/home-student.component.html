@@ -1,8 +1,8 @@
 <div class="container">
   <h2>Your Projects :</h2>
 <ul>
-  <li *ngFor="let projet of projects">
-    <button>{{ projet.name }}</button>
+  <li *ngFor="let project of projects$ | async">
+    <button [routerLink]="['/project', project.id]">{{ project.name }}</button>
   </li>
 </ul>
 </div>

@@ -8,6 +8,8 @@ import { InscriptionComponent } from './inscription/inscription.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { HomeTeacherComponent } from './home-teacher/home-teacher.component';
 import { HomeStudentComponent } from './home-student/home-student.component';
+import { ProjectDetailComponent } from './project-detail/project-detail.component';
+import { ProjectsComponent } from './projects/projects.component';
 
 
 const routes: Routes = [
@@ -20,6 +22,7 @@ const routes: Routes = [
 { path: 'inscription', component: InscriptionComponent },
 { path: 'homestudent', component: HomeStudentComponent },
 { path: 'hometeacher', component: HomeTeacherComponent },
+{ path: 'project/:id', component: ProjectDetailComponent }
 ];
 
 @NgModule({

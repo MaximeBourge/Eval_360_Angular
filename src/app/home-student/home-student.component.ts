@@ -1,4 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { Project } from '../interfaces/project';
+import { Group } from '../interfaces/group';
+import { ProjectService } from '../project.service';
 
 @Component({
   selector: 'app-home-student',
@@ -7,17 +12,13 @@ import { Component } from '@angular/core';
 })
 export class HomeStudentComponent {
 
-  projects = [
-    { name: 'Project 11111111111111111111111111111111111LSKDHLSQHDLKSQLQKSFJLQSFJLSQKFLSFLQSK', description: 'Description of Project 1' },
-    { name: 'Project 2', description: 'Description of Project 2' },
-    { name: 'Project 3', description: 'Description of Project 3' },
-    { name: 'Project 4', description: 'Description of Project 4' },
-    { name: 'Project 5', description: 'Description of Project 5' },
-    { name: 'Project 11111111111111111111111111111111111LSKDHLSQHDLKSQLQKSFJLQSFJLSQKFLSFLQSK', description: 'Description of Project 1' },
-    { name: 'Project 2', description: 'Description of Project 2' },
-    { name: 'Project 3', description: 'Description of Project 3' },
-    { name: 'Project 4', description: 'Description of Project 4' },
-    { name: 'Project 5', description: 'Description of Project 5' },
-  ];
+  projects$!: Observable<Project[]>;
 
+  constructor(
+    private route: Router,
+    private projectService: ProjectService) { }
+
+  ngOnInit() {
+    this.projects$ = this.projectService.getProjects();
+  }
 }

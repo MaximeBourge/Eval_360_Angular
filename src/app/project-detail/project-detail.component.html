@@ -1,0 +1,19 @@
+<div class="project-container">
+  <div class="project-info">
+    <h2>Project: {{ (project$ | async)?.name }}</h2>
+    <h3>Group: {{ group.name }}</h3>
+    <div class="project-group-info">
+      <label>Grade Group members</label>
+      <div class="members-list">
+        <li *ngFor="let member of members">
+          <div class="member-row">
+            <span class="member-name">{{ member }}</span>
+            <div class="member-info">
+              <input type="number" class="member-note" min="0" max="20">
+            </div>
+          </div>
+        </li>
+      </div>
+    </div>
+  </div>
+</div>
